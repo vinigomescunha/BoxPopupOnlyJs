@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Layer PopUp only JS</title>
+    <style>
+        #teste,
+        #teste2,
+        #default {
+            display: none;
+        }
+        
+        a.closebtn {
+            float: right;
+            margin-top: -10px;
+            margin-right: -10px;
+            cursor: pointer;
+            color: #fff;
+            border: 2px solid #333333;
+            border-radius: 30px;
+            background: #000000;
+            font-size: 23px;
+            font-weight: bold;
+            display: inline-block;
+            line-height: 0px;
+            padding: 11px 3px;
+        }
+        
+        .closebtn::after {
+            content: "×";
+        }
+
+        /* optional */
+        #content{
+            text-align: center;
+        }
+
+        #content button{
+              border: 1px solid #5F0B0B;
+              cursor: pointer;
+              padding: 10px 8px;
+              border-radius: 11px;
+              font-family: Verdana;
+              background-color: #3F1B1B;
+              color: #FFFFFF;
+        }
+    </style>
+    <script>
+        example2 = {
+            layer: {
+                backgroundColor: "#333",
+                opacity: ".7"
+            },
+            popup: {
+                maxWidth: "300px",
+                maxHeight: "400px",
+                backgroundColor: "#DDD",
+                opacity: ".9",
+                margin: "50px auto"
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="content">
+	<a style="float:right;paddinbg:10px;font-size:30px" href=index2.html>#2</a>
+        <h1>Layer PopUp Only Js</h1>
+        <button onclick="popUp('#teste',{layer:{backgroundColor:'#CCC'}})">Example 1</button>
+        <button onclick="popUp('#teste2',example2)">Example 2</button>
+        <button onclick="popUp('#default')">Default</button>
+        <div id="teste">Example 1 Layer PopUp</div>
+        <div id="teste2">Example 2 Layer PopUP</div>
+        <div id="default">
+            <div>Default
+                <input type="text" placeholder="This is only a input box">
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="popBox.js"></script>
+</html>
