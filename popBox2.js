@@ -53,7 +53,7 @@ var popUp = function(el, uDef) {
             };
             l.width = window.innerWidth + "px",
                 l.height = window.innerHeight + "px";
-            popUp(el, l);
+            popUp(el, uDef);
         }
     }
 
